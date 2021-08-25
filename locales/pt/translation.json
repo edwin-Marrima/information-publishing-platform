@@ -1,0 +1,18 @@
+{
+    "name_null"           : "Usuario nao pode ser nulo",
+    "name_size"           : "Nome de usuario deve ter 4 a 32 caracteres",
+    "email_null"          : "Email nao pode ser nulo",
+    "email_invalid"       : "Email invalido",
+    "password_null"       : "Password nao pode ser nulo",
+    "password_size"       : "Password deve ter no minimo 6 caracteres",
+    "email_inuse"         : "Email em uso",
+    "user_create_sucess"  : "Usuario criado com exito",
+    "email_failure"       : "Erro de envio",
+    "account_activation_failure": "Essa conta esta activa ou o token eh invalido",
+    "account_activation_success": "Conta ativa com exito",
+    "validation_failure":    "Erro de validacao",
+    "user_not_found":        "usuario nao encontrado",
+    "authentication_failure": "Credenciais incorrtas",
+    "inactive_authentication_failure":"Conta inactiva",
+    "unauthroized_user_update":"voce nao tem autorizacao para actualizar usuario"
+  }

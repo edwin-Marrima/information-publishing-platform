@@ -1,0 +1,18 @@
+{
+  "name_null"            : "Username cannot be null",
+  "name_size"            : "Must have min 4 and max 32 characters",
+  "email_null"           : "Email cannot be null",
+  "email_invalid"        : "Email is not valid",
+  "password_null"        : "Password cannot be null",
+  "password_size"        : "Password must be at least 6 characters",
+  "email_inuse"          : "Email in use",
+  "user_create_sucess"   : "User created",
+  "email_failure"        : "Email Failure",
+  "account_activation_failure": "This account is either active or the token is invalid",
+  "account_activation_success":"Account is activated",
+  "validation_failure": "Validation failure",
+  "user_not_found":       "user not found",
+  "authentication_failure": "Incorret credentials",
+  "inactive_authentication_failure":"Account is inactive",
+  "unauthroized_user_update":"You are not authorized to update user"
+}
