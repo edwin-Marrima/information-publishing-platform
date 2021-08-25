@@ -1,5 +1,5 @@
+***Information Publishing Platform***
 
-#information-publishing-platform
 
 This project followed the test-driven development model
 - [X] WRITE A TEST FOR EXPECTED BEHAVIOR
@@ -20,7 +20,7 @@ Database ORM| Sequelize
 BACKEND TECH| Nodejs (Express)
 API|REST
 UNIT TEST| JEST
-|
+
 ##BASIC ENDPOINTS
 USED TECH | METHOD | -
 ---|---|---|
@@ -29,7 +29,7 @@ USED TECH | METHOD | -
 /api/1.0/users| get| pagination
 /api/1.0/users/:id|get| retrieve specific user
 /api/1.0/users/:id|put|update user
-|
+
 ####Example: ***/api/1.0/users***
 where: 
 - 1.0  - is the api version
