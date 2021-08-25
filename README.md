@@ -5,7 +5,7 @@ This project followed the test-driven development model
 - [X] WRITE A TEST FOR EXPECTED BEHAVIOR
 - [X] WRITE THE CODE FOR THE TEST TO PASS
 - [X] CLEANUP THE CODE (*REFACTOR*) 
-- [X] :shipit:
+- [X] :ok_hand:
 
 this is a **RESTfull API** that meets all the necessary requirements. Being that it allows user authentication (using JWT and basic auth) listing, update, delete, user activation token, etc...
 ## Instalation
@@ -33,5 +33,9 @@ USED TECH | METHOD | -
 ####Example: ***/api/1.0/users***
 where: 
 - 1.0  - is the api version
-##LICENSE
-[Edwin Fernando Marrima](https://mz.linkedin.com/in/edwin-marrima-18046019b/)m
+
+
+###LICENSE
+
+
+[Edwin Fernando Marrima](https://mz.linkedin.com/in/edwin-marrima-18046019b/)
