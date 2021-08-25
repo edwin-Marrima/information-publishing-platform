@@ -1,4 +1,4 @@
-***Information Publishing Platform***
+# ***Information Publishing Platform***
 
 
 This project followed the test-driven development model
@@ -13,7 +13,7 @@ this is a **RESTfull API** that meets all the necessary requirements. Being that
 ```bash
 npm install
 ```
-##BASIC DETAILS
+## BASIC DETAILS
 USED TECH | -
 ---|---|
 Database ORM| Sequelize
@@ -21,7 +21,7 @@ BACKEND TECH| Nodejs (Express)
 API|REST
 UNIT TEST| JEST
 
-##BASIC ENDPOINTS
+## BASIC ENDPOINTS
 USED TECH | METHOD | -
 ---|---|---|
 /api/1.0/users| post|Create user
@@ -30,7 +30,7 @@ USED TECH | METHOD | -
 /api/1.0/users/:id|get| retrieve specific user
 /api/1.0/users/:id|put|update user
 
-####Example: ***/api/1.0/users***
+### Example: ***/api/1.0/users***
 where: 
 - 1.0  - is the api version
 
