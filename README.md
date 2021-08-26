@@ -84,7 +84,7 @@ ENDPOINT | METHOD | -
     "message": "Essa conta esta activa ou o token eh invalido"
 }
 ```
-![API error response](https://drive.google.com/file/d/1dQxiOdtXRcR9_y5feJQBmE33v1CHXlrc/view?usp=sharing)
+[API error response](https://drive.google.com/file/d/1dQxiOdtXRcR9_y5feJQBmE33v1CHXlrc/view?usp=sharing)
 ### Example: ***/api/1.0/users***
 where:
 - 1.0  - is the api version
