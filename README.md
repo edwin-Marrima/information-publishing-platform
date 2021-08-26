@@ -21,6 +21,7 @@ BACKEND TECH| Nodejs (Express)
 WEBSERVICE (*API*)|REST
 UNIT TEST| JEST
 LANGUAGE| Portuguese and English
+STRING VALIDATOR|express-validator package
 
 ## BASIC ENDPOINTS
 ENDPOINT | METHOD | -
