@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": { 
+    "node": "14.15.1" 
+  },
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development npm run migrate && cross-env NODE_ENV=development nodemon index",
     "start": "cross-env NODE_ENV=production npm run migrate && cross-env NODE_ENV=production node index",
