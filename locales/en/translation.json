@@ -14,5 +14,12 @@
   "user_not_found":       "user not found",
   "authentication_failure": "Incorret credentials",
   "inactive_authentication_failure":"Account is inactive",
-  "unauthroized_user_update":"You are not authorized to update user"
+  "unauthroized_user_update":"You are not authorized to update user",
+  "unauthroized_user_delete":"You are not authorized to delete user",
+  "email_not_inuse":"Email not found",
+  "password_rest_request_sucess":"Check your e-mail for resetting you password",
+  "unauthroized_password_reset":"You are not authorized to update your password. Please follow the password rest steps again",
+  "profile_image_size": "Your umage cannot be bigger than 2MB",
+  "unsupported_image_file": "Only JPEG or PNG files are allowed"
+
 }

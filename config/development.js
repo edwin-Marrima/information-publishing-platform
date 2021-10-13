@@ -1,0 +1,15 @@
+module.exports = {
+  "database": {
+       "database": "hoaxify",
+       "username":"my-db-user",
+       "password": "db-p4ss",
+       "dialect": "sqlite",
+       "storage": "./database.sqlite",
+       "logging" : false
+  },
+  "mail": {
+
+  },
+  uploadDir:'uploads-dev',
+  profileDir:'profile'
+}

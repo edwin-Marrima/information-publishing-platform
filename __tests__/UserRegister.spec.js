@@ -6,7 +6,7 @@ const emailService = require('../src/email/EmailService');
 const SMTPServer = require('smtp-server').SMTPServer;
 const en = require('../locales/en/translation.json');
 const pt = require('../locales/pt/translation.json');
-
+const config = require('config')
 
 let lastMail, server;
 let simulateSmtpFailure = false;
@@ -30,15 +30,17 @@ beforeAll(async () => {
     },
   });
 
-  await server.listen(8587, 'localhost');
-  await sequilize.sync();
+  await server.listen(config.mail.port, 'localhost');
+   if(process.env.NODE_ENV === 'test'){
+      await sequilize.sync();
+    }
   jest.setTimeout(20000);
 
 });
 
 beforeEach(async () => {
   simulateSmtpFailure = false;
-  await User.destroy({ truncate: true });
+  await User.destroy({ truncate: {cascade:true} });
 });
 
 afterAll(async () => {

@@ -14,5 +14,11 @@
     "user_not_found":        "usuario nao encontrado",
     "authentication_failure": "Credenciais incorrtas",
     "inactive_authentication_failure":"Conta inactiva",
-    "unauthroized_user_update":"voce nao tem autorizacao para actualizar usuario"
+    "unauthroized_user_update":"voce nao tem autorizacao para actualizar usuario",
+    "unauthroized_user_delete":"Voce nao tem autorizacao para deletar usuario",
+    "email_not_inuse":"Email nao encontrado",
+    "password_rest_request_sucess": "Verifique o seu email pra recuperar a sua conta",
+    "unauthroized_password_reset":"Voce nao tem autorizacao para actualizar a sua senha. Por favor, recomece o processo novamente.",
+    "profile_image_size": "A sua imagem de perfil nao pode ser maior que 2BM",
+    "unsupported_image_file": "Apenas JPEG e PNG sao suportados"
   }
