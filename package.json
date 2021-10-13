@@ -7,6 +7,7 @@
     "node": "14.15.1" 
   },
   "scripts": {
+    "preinstall": "npm config set package-lock false",
     "start:dev": "cross-env NODE_ENV=development npm run migrate && cross-env NODE_ENV=development nodemon index",
     "start": "cross-env NODE_ENV=production npm run migrate && cross-env NODE_ENV=production node index",
     "test": "cross-env NODE_ENV=test jest --watch && cross-env NODE_ENV=test node test-cleanup npm run clean-up",
