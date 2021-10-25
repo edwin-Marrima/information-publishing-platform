@@ -31,6 +31,12 @@ ENDPOINT | METHOD | -
 /api/1.0/users| get| pagination
 /api/1.0/users/:id|get| retrieve specific user
 /api/1.0/users/:id|put|update user
+/api/1.0/user/password|put|update password
+/api/1.0/user/password|put|update password
+/api/1.0./user/password|put|generate password reset token
+/api/1.0/users/:id|delete|delete user
+/api/1.0/auth|post|User authentication
+/api/1.0/logout|post|user logout
 
 ## API RESPONSE
  In case of an unsuccessful request the error message is shown below
@@ -48,6 +54,7 @@ ENDPOINT | METHOD | -
     "message": "This account is either active or the token is invalid"
 }
 ```
+ User listing sucessful response
 ```json
 {
     "content": [
@@ -83,7 +90,7 @@ ENDPOINT | METHOD | -
     "message": "Essa conta esta activa ou o token eh invalido"
 }
 ```
-![API error response](D:\Fundos\aaaaaaaaa.png)
+[API error response](https://drive.google.com/file/d/1dQxiOdtXRcR9_y5feJQBmE33v1CHXlrc/view?usp=sharing)
 ### Example: ***/api/1.0/users***
 where:
 - 1.0  - is the api version
