@@ -38,6 +38,7 @@ ENDPOINT | METHOD | -
 /api/1.0/auth|post|User authentication
 /api/1.0/logout|post|user logout
 
+
 ## API RESPONSE
  In case of an unsuccessful request the error message is shown below
 ```json
