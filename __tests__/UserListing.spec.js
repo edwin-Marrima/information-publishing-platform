@@ -7,17 +7,25 @@ const pt = require('../locales/pt/translation.json');
 const bcrypt = require('bcrypt');
 
 beforeAll(async () => {
+   if(process.env.NODE_ENV === 'test'){
   await sequilize.sync();
+  }
 });
-beforeEach(async  () => {
-  await User.destroy({ truncate: true });
+beforeEach(async () => {
+  await User.destroy({ truncate: {cascade:true} });
 });
-
+const auth = async (options = {}) => {
+  let token;
+  if (options.auth) {
+    const response = await request(app).post('/api/1.0/auth').send(options.auth);
+    token = response.body.token;
+  }
+  return token;
+};
 const getUsers = (options = {}) => {
 const agent = request(app).get('/api/1.0/users');
-if(options.auth){
-  const {email,password} = options.auth;
-  agent.auth(email,password);
+if(options.token){
+  agent.set('Authorization',`Bearer ${options.token}`)
 }
   return agent;
 };
@@ -59,11 +67,11 @@ describe('Listing Users', () => {
     const response = await getUsers();
     expect(response.body.content.length).toBe(6);
   });
-  it('returns only id, username and email in content array for each user', async () => {
+  it('returns only id, username image and email in content array for each user', async () => {
     await addUsers(14);
     const response = await getUsers();
     const user = response.body.content[0];
-    expect(Object.keys(user)).toEqual(['id', 'username', 'email']);
+    expect(Object.keys(user)).toEqual(['id', 'username', 'email','image']);
   });
   it('returns 2 as total pages when there are 15 active and 7 inactive users', async () => {
     await addUsers(15, 7);
@@ -109,7 +117,8 @@ describe('Listing Users', () => {
   });
   it('returns user page without logged in user when request has valid authorization',async()=>{
     await addUsers(11);
-    const response = await getUsers({auth:{email:'user2@mail.com',password:'P4ssword'}});
+    const token = await auth({ auth: { email: 'user4@mail.com', password: 'P4ssword' } });
+    const response = await getUsers({token:token});
     expect(response.body.totalPages).toBe(1);
   })
 });
@@ -151,14 +160,14 @@ describe('Get user', () => {
     expect(response.status).toBe(200);
   });
 
-  it('returns id, username and email in response body when an active user exist', async () => {
+  it('returns id, username, image and email in response body when an active user exist', async () => {
     const user = await User.create({
       username: 'user1',
       email: 'user1@gmail.com',
       inactive: false,
     });
     const response = await getUser(user.id);
-    expect(Object.keys(response.body)).toEqual(['id', 'username', 'email']);
+    expect(Object.keys(response.body)).toEqual(['id', 'username', 'email','image']);
   });
 
   it('returns 404 when the user is inactive', async () => {

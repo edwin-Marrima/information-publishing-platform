@@ -31,6 +31,13 @@ ENDPOINT | METHOD | -
 /api/1.0/users| get| pagination
 /api/1.0/users/:id|get| retrieve specific user
 /api/1.0/users/:id|put|update user
+/api/1.0/user/password|put|update password
+/api/1.0/user/password|put|update password
+/api/1.0./user/password|put|generate password reset token
+/api/1.0/users/:id|delete|delete user
+/api/1.0/auth|post|User authentication
+/api/1.0/logout|post|user logout
+
 
 ## API RESPONSE
  In case of an unsuccessful request the error message is shown below

@@ -1,0 +1,15 @@
+{"level":"error","message":"error"}
+{"level":"info","message":"Server is runnig"}
+{"level":"error","message":"error"}
+{"level":"info","message":"Server is runnig"}
+{"level":"error","message":"error"}
+{"level":"error","message":"error"}
+{"level":"error","message":"error"}
+{"level":"error","message":"error"}
+{"level":"error","message":"error"}
+2021-10-13T18:37:43.270Z error error
+2021-10-13T18:39:38.084Z [error] : error
+2021-10-13T18:40:02.188Z [error  ] : error
+2021-10-13T18:40:27.022Z [ERROR  ] : error
+2021-10-13T18:42:33.190Z [ERROR  ] : error
+2021-10-13T21:25:07.358Z [INFO   ] : Server is runnig

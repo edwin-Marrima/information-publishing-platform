@@ -1,4 +1,4 @@
-{
+module.exports = {
   "database": {
        "database": "hoaxify",
        "username":"my-db-user",
@@ -9,5 +9,7 @@
   },
   "mail": {
 
-  }
+  },
+  uploadDir:'uploads-dev',
+  profileDir:'profile'
 }

@@ -1,24 +1,13 @@
 const app = require('./src/app');
 const sequelize = require('./src/config/database')
-const User = require('./src/user/User');
-const bcrypt = require('bcrypt');
+const TokenService = require('./src/auth/TokenService')
+const logger = require('./src/shared/logger');
 
-const addUsers = async (activeUserCount, inactiveUsercount = 0) => {
-  const hash = await bcrypt.hash('P4ssword',10);
-  for (let i = 0; i < activeUserCount + inactiveUsercount; i++) {
-    await User.create({
-      username: `user${i + 1}`,
-      email: `user${i + 1}@mail.com`,
-      inactive: i >= activeUserCount,
-      password: hash,
-    });
-  }
-};
-sequelize.sync({force:true}).then(async()=>{
-   await addUsers(25)
-})
+sequelize.sync();
 // sequelize.sync();
+TokenService.scheduleCleanup();
 
-app.listen(8080, () => {
-  console.log('Server is runnig');
+
+app.listen(process.env.PORT || 3000, () => {
+  logger.info('Server is runnig');
 });
